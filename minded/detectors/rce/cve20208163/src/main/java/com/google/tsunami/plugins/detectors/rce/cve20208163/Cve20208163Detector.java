@@ -21,6 +21,7 @@ import static com.google.common.collect.ImmutableList.toImmutableList;
 import com.google.common.collect.ImmutableList;
 import com.google.common.flogger.GoogleLogger;
 import com.google.protobuf.util.Timestamps;
+import com.google.tsunami.common.data.NetworkServiceUtils;
 import com.google.tsunami.common.time.UtcClock;
 import com.google.tsunami.plugin.PluginType;
 import com.google.tsunami.plugin.VulnDetector;
@@ -53,7 +54,7 @@ public final class Cve20208163Detector implements VulnDetector {
   private final Clock utcClock;
 
   @Inject
-  ExampleVulnDetector(@UtcClock Clock utcClock) {
+  Cve20208163Detector(@UtcClock Clock utcClock) {
     this.utcClock = checkNotNull(utcClock);
   }
 
@@ -72,7 +73,7 @@ public final class Cve20208163Detector implements VulnDetector {
         .build();
   }
 
-  private boolean isServiceVulnerable() {
+  private boolean isServiceVulnerable(NetworkService networkService) {
     // TODO: implement this
     return true;
   }
@@ -88,7 +89,7 @@ public final class Cve20208163Detector implements VulnDetector {
         .setVulnerability(
             Vulnerability.newBuilder()
                 .setMainId(
-                    VulnerabilityId.newBuilder().setPublisher("vulnerability_id_publisher").setValue("CVE_2020_8163"))
+                    VulnerabilityId.newBuilder().setPublisher("TODO").setValue("CVE_2020_8163"))
                 .setSeverity(Severity.CRITICAL)
                 .setTitle("CVE-2020-8163")
                 .setDescription("TODO"))
