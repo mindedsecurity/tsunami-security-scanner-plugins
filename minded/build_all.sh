@@ -19,7 +19,7 @@ SCRIPT_PATH="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 GENERATED_PLUGINS_PATH="${SCRIPT_PATH}/build/plugins"
 mkdir -p "${GENERATED_PLUGINS_PATH}"
 
-# For each Doyensec plugin, build the jar file and copy it to build/plugins
+# For each Minded plugin, build the jar file and copy it to build/plugins
 # folder.
 for plugin_dir in $(find "${SCRIPT_PATH}" -name 'gradlew' -print0 | xargs -0 -n1 dirname | sort --unique) ; do
   plugin_name="${plugin_dir##*"${SCRIPT_PATH}/"}"
