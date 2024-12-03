@@ -53,7 +53,7 @@ mentre il contenuti degli script `run.sh` e `compile.sh` e il contenuto dei dock
 
 -----
 
-Per continuare è necessario creare due docker container, chiamati rispettivamente `tsunami` e `tsunami-builder`. Il docker `tsunami` conterrà il processo dello scanner, e sarà dunque utilizzato per effettuare gli scan, mentre  `tsunami-builder` conterrà gli strumenti per compilare i vari plugin. Entrambi questi docker dovranno condividere l'interfaccia di rete con l'host, quindi sarà necessaria la flag `--network="host"`. Per condividere le tra i docker e l'host saranno montati dei volumi con `-v`.
+Per continuare è necessario creare due docker container, chiamati rispettivamente `tsunami` e `tsunami-builder`. Il docker `tsunami` conterrà il processo dello scanner, e sarà dunque utilizzato per effettuare gli scan, mentre  `tsunami-builder` conterrà gli strumenti per compilare i vari plugin. Entrambi questi docker dovranno condividere l'interfaccia di rete con l'host, quindi sarà necessaria la flag `--network="host"`. Per condividere i plugins tra i docker e l'host, saranno montati dei volumi durante l'avvio dei container con la flag `-v`.
 
 Seguono le istruzioni per buildare le immagini. Entambi i comandi di
 build devono essere eseguiti a partire dalla cartella principale.
