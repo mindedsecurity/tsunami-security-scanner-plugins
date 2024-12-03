@@ -7,7 +7,7 @@ This directory contains all Tsunami plugins published by
 
 ### Detectors
 
-*   [Plugin Name](link)
+*  [CVE-2020-8163](detectors/rce/cve20208163)
 
 ## Build all plugins
 
